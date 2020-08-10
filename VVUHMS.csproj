@@ -1,0 +1,526 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{47DDF2E0-EA38-485A-AF80-464E36F03879}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>VVUHMS</RootNamespace>
+    <AssemblyName>VVUHMS</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>VVUHMS.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Bunifu.Core, Version=1.11.5.21, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9" />
+    <Reference Include="Bunifu.UI.WinForm.BunifuShadowPanel">
+      <HintPath>..\..\..\Downloads\Programs\Bunifu 1.5.3\Bunifu.UI.WinForm.BunifuShadowPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton">
+      <HintPath>..\..\..\Downloads\Programs\Bunifu 1.5.3\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCircleProgress">
+      <HintPath>..\..\..\Downloads\Programs\Bunifu 1.5.3\Bunifu.UI.WinForms.BunifuCircleProgress.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuColorTransition">
+      <HintPath>..\..\..\Downloads\Programs\Bunifu 1.5.3\Bunifu.UI.WinForms.BunifuColorTransition.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView">
+      <HintPath>..\..\..\Downloads\Programs\Bunifu 1.5.3\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDatePicker">
+      <HintPath>..\..\..\Downloads\Programs\Bunifu 1.5.3\Bunifu.UI.WinForms.BunifuDatePicker.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDropdown">
+      <HintPath>..\..\..\Downloads\Programs\Bunifu 1.5.3\Bunifu.UI.WinForms.BunifuDropdown.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuFormDock">
+      <HintPath>..\..\..\Downloads\Programs\Bunifu 1.5.3\Bunifu.UI.WinForms.BunifuFormDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGauge">
+      <HintPath>..\..\..\Downloads\Programs\Bunifu 1.5.3\Bunifu.UI.WinForms.BunifuGauge.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuImageButton">
+      <HintPath>..\..\..\Downloads\Programs\Bunifu 1.5.3\Bunifu.UI.WinForms.BunifuImageButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuLabel">
+      <HintPath>..\..\..\Downloads\Programs\Bunifu 1.5.3\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPages">
+      <HintPath>..\..\..\Downloads\Programs\Bunifu 1.5.3\Bunifu.UI.WinForms.BunifuPages.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPictureBox">
+      <HintPath>..\..\..\Downloads\Programs\Bunifu 1.5.3\Bunifu.UI.WinForms.BunifuPictureBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuProgressBar">
+      <HintPath>..\..\..\Downloads\Programs\Bunifu 1.5.3\Bunifu.UI.WinForms.BunifuProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
+      <HintPath>..\..\..\Downloads\Programs\Bunifu 1.5.3\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuToolTip">
+      <HintPath>..\..\..\Downloads\Programs\Bunifu 1.5.3\Bunifu.UI.WinForms.BunifuToolTip.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTransition">
+      <HintPath>..\..\..\Downloads\Programs\Bunifu 1.5.3\Bunifu.UI.WinForms.BunifuTransition.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuUserControl">
+      <HintPath>..\..\..\Downloads\Programs\Bunifu 1.5.3\Bunifu.UI.WinForms.BunifuUserControl.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.ToggleSwitch">
+      <HintPath>..\..\..\Downloads\Programs\Bunifu 1.5.3\Bunifu.UI.WinForms.ToggleSwitch.dll</HintPath>
+    </Reference>
+    <Reference Include="BunifuDataViz">
+      <HintPath>..\..\..\Downloads\Programs\Bunifu Dataviz Advanced 1.1.1.5\BunifuDataViz.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\MyDigitalAssitance\bin\Debug\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin">
+      <HintPath>..\COSSA_Project\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Consultation.cs">
+      <DependentUpon>VVUHMS_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Drug.cs">
+      <DependentUpon>VVUHMS_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AttendToPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AttendToPatient.Designer.cs">
+      <DependentUpon>AttendToPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ConfirmToClose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ConfirmToClose.Designer.cs">
+      <DependentUpon>ConfirmToClose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ForwardToDoctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ForwardToDoctor.Designer.cs">
+      <DependentUpon>ForwardToDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CheckOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CheckOut.Designer.cs">
+      <DependentUpon>CheckOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Notification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Notification.Designer.cs">
+      <DependentUpon>Notification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PatientDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PatientDetails.Designer.cs">
+      <DependentUpon>PatientDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PatientPrescription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PatientPrescription.Designer.cs">
+      <DependentUpon>PatientPrescription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PharmacyCheckOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PharmacyCheckOut.Designer.cs">
+      <DependentUpon>PharmacyCheckOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\AdminForms\AddStaffNPat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\AdminForms\AddStaffNPat.Designer.cs">
+      <DependentUpon>AddStaffNPat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\AdminForms\SearchPatNStaff.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\AdminForms\SearchPatNStaff.Designer.cs">
+      <DependentUpon>SearchPatNStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\Pharmacist\AllDrugs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\Pharmacist\AllDrugs.Designer.cs">
+      <DependentUpon>AllDrugs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\DoctorForms\ConsultPatients.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\DoctorForms\ConsultPatients.Designer.cs">
+      <DependentUpon>ConsultPatients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\Pharmacist\AllPatientsPrescription.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\Pharmacist\AllPatientsPrescription.Designer.cs">
+      <DependentUpon>AllPatientsPrescription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\profile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\profile.Designer.cs">
+      <DependentUpon>profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\NurseForms\AddRecordPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\NurseForms\AddRecordPage.Designer.cs">
+      <DependentUpon>AddRecordPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\AdminPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\AdminPage.Designer.cs">
+      <DependentUpon>AdminPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\DoctorPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\DoctorPage.Designer.cs">
+      <DependentUpon>DoctorPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\LoginPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\LoginPage.Designer.cs">
+      <DependentUpon>LoginPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\NursePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\NursePage.Designer.cs">
+      <DependentUpon>NursePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\NurseForms\SearchPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\NurseForms\SearchPage.Designer.cs">
+      <DependentUpon>SearchPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\PharmacistPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\PharmacistPage.Designer.cs">
+      <DependentUpon>PharmacistPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\NurseForms\VitalsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\NurseForms\VitalsPage.Designer.cs">
+      <DependentUpon>VitalsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\NurseForms\UpdateRecordsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\NurseForms\UpdateRecordsPage.Designer.cs">
+      <DependentUpon>UpdateRecordsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VitalsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VitalsForm.Designer.cs">
+      <DependentUpon>VitalsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ForwardRecord.cs">
+      <DependentUpon>VVUHMS_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Patient.cs">
+      <DependentUpon>VVUHMS_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PatientVital.cs">
+      <DependentUpon>VVUHMS_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PharmacyPatientPrescription.cs">
+      <DependentUpon>VVUHMS_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Position.cs">
+      <DependentUpon>VVUHMS_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Prescription.cs">
+      <DependentUpon>VVUHMS_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Staff.cs">
+      <DependentUpon>VVUHMS_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>VVUHMS_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VVUHMSDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VVUHMSDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VVUHMSDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VVUHMSDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VVUHMS_DB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VVUHMS_DB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VVUHMS_DB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VVUHMS_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VVUHMS_DB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VVUHMS_DB.edmx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AttendToPatient.resx">
+      <DependentUpon>AttendToPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ConfirmToClose.resx">
+      <DependentUpon>ConfirmToClose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ForwardToDoctor.resx">
+      <DependentUpon>ForwardToDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CheckOut.resx">
+      <DependentUpon>CheckOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Notification.resx">
+      <DependentUpon>Notification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PatientDetails.resx">
+      <DependentUpon>PatientDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PatientPrescription.resx">
+      <DependentUpon>PatientPrescription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PharmacyCheckOut.resx">
+      <DependentUpon>PharmacyCheckOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControls\AdminForms\AddStaffNPat.resx">
+      <DependentUpon>AddStaffNPat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControls\AdminForms\SearchPatNStaff.resx">
+      <DependentUpon>SearchPatNStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControls\Pharmacist\AllDrugs.resx">
+      <DependentUpon>AllDrugs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControls\DoctorForms\ConsultPatients.resx">
+      <DependentUpon>ConsultPatients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControls\NurseForms\AddRecordPage.resx">
+      <DependentUpon>AddRecordPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControls\AdminPage.resx">
+      <DependentUpon>AdminPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControls\DoctorPage.resx">
+      <DependentUpon>DoctorPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControls\LoginPage.resx">
+      <DependentUpon>LoginPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControls\NursePage.resx">
+      <DependentUpon>NursePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControls\NurseForms\SearchPage.resx">
+      <DependentUpon>SearchPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControls\PharmacistPage.resx">
+      <DependentUpon>PharmacistPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControls\NurseForms\VitalsPage.resx">
+      <DependentUpon>VitalsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControls\NurseForms\UpdateRecordsPage.resx">
+      <DependentUpon>UpdateRecordsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControls\Pharmacist\AllPatientsPrescription.resx">
+      <DependentUpon>AllPatientsPrescription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControls\profile.resx">
+      <DependentUpon>profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VitalsForm.resx">
+      <DependentUpon>VitalsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.Config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="VVUHMSDataSet.xsc">
+      <DependentUpon>VVUHMSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="VVUHMSDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VVUHMSDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VVUHMSDataSet.xss">
+      <DependentUpon>VVUHMSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="VVUHMSDataSet1.xsc">
+      <DependentUpon>VVUHMSDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="VVUHMSDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VVUHMSDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VVUHMSDataSet1.xss">
+      <DependentUpon>VVUHMSDataSet1.xsd</DependentUpon>
+    </None>
+    <EntityDeploy Include="VVUHMS_DB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>VVUHMS_DB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="VVUHMS_DB.edmx.diagram">
+      <DependentUpon>VVUHMS_DB.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="VVUHMS_DB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>VVUHMS_DB.Context.cs</LastGenOutput>
+      <DependentUpon>VVUHMS_DB.edmx</DependentUpon>
+    </Content>
+    <Content Include="VVUHMS_DB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>VVUHMS_DB.edmx</DependentUpon>
+      <LastGenOutput>VVUHMS_DB.cs</LastGenOutput>
+    </Content>
+    <None Include="bin\Debug\Images\hidePass.png" />
+    <None Include="bin\Debug\Images\revealPass.png" />
+    <Content Include="Images\close.png" />
+    <Content Include="Images\error.png" />
+    <Content Include="Images\icons8_cancel_25px_1.png" />
+    <Content Include="Images\icons8_menu_20px_1.png" />
+    <Content Include="Images\icons8_search_32px.png" />
+    <Content Include="Images\icons8_sign_out_32px.png" />
+    <Content Include="Images\icons8_update_user_32px.png" />
+    <Content Include="Images\info.png" />
+    <Content Include="Images\maximize.png" />
+    <Content Include="Images\minimize.png" />
+    <Content Include="Images\restore_down.png" />
+    <Content Include="Images\success.png" />
+    <Content Include="Images\warning.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

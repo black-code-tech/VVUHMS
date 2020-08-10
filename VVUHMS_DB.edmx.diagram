@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ef4fc1a13c8a4c95b5a7fcb5bd50b521" Name="Diagram1">
+        <EntityTypeShape EntityType="VVUHMSModel.Consultation" Width="1.5" PointX="3" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="VVUHMSModel.Drug" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VVUHMSModel.ForwardRecord" Width="1.5" PointX="6" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VVUHMSModel.Patient" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VVUHMSModel.PatientVital" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="VVUHMSModel.PharmacyPatientPrescription" Width="1.5" PointX="3" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="VVUHMSModel.Position" Width="1.5" PointX="5.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VVUHMSModel.Prescription" Width="1.5" PointX="3" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="VVUHMSModel.Staff" Width="1.5" PointX="0.75" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VVUHMSModel.sysdiagram" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="VVUHMSModel.FK_Consultations_Patients" ManuallyRouted="false" />
+        <AssociationConnector Association="VVUHMSModel.FK_Consultations_PatientVitals" ManuallyRouted="false" />
+        <AssociationConnector Association="VVUHMSModel.FK_Consultations_Staff" ManuallyRouted="false" />
+        <AssociationConnector Association="VVUHMSModel.FK_ForwardToDoctor_Patients" ManuallyRouted="false" />
+        <AssociationConnector Association="VVUHMSModel.FK_ForwardToDoctor_Staff" ManuallyRouted="false" />
+        <AssociationConnector Association="VVUHMSModel.FK_PharmacyPatientPrescriptions_PharmacyPatientPrescriptions" ManuallyRouted="false" />
+        <AssociationConnector Association="VVUHMSModel.FK_Prescriptions_Patients" ManuallyRouted="false" />
+        <AssociationConnector Association="VVUHMSModel.FK_PharmacyPatientPrescriptions_PatientVitals" ManuallyRouted="false" />
+        <AssociationConnector Association="VVUHMSModel.FK_Prescriptions_PatientVitals" ManuallyRouted="false" />
+        <AssociationConnector Association="VVUHMSModel.FK_PharmacyPatientPrescriptions_PharmacyPatientPrescriptions1" ManuallyRouted="false" />
+        <AssociationConnector Association="VVUHMSModel.FK_Prescriptions_Staff" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
